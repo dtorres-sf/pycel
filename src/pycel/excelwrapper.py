@@ -309,7 +309,7 @@ class ExcelOpxWrapper(ExcelWrapper):
             title,address = address.split('!')
             sheet = self.workbook[title]
             sheetDO = self.workbookDO[title] 
-
+        print address
         cells = [[cell for cell in row] for row in sheet.iter_rows(address) ]
         cellsDO = [[cell for cell in row] for row in sheetDO.iter_rows(address)]
         
